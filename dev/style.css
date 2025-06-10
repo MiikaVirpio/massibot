@@ -1,0 +1,10 @@
+.gradient-bg {
+    background: linear-gradient(90deg, rgba(68,202,255,1) 0%, rgba(223,50,198,1) 49%, rgba(255,102,63,1) 100%);
+}
+#messages {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#messages::-webkit-scrollbar {
+    display: none;
+}

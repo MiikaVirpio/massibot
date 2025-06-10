@@ -1,0 +1,37 @@
+{
+	"name": "Python + DB + Redis + Azure",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"forwardPorts": [5432, 6379, 8000, 2024],
+	"portsAttributes": {
+		"5432": {"label": "PostgreSQL", "onAutoForward": "silent"},
+		"6379": {"label": "Redis", "onAutoForward": "silent"},
+		"8000": {"label": "Django", "onAutoForward": "silent"},
+		"2024": {"label": "LangGraph", "onAutoForward": "silent"}
+	},
+	"postCreateCommand": "pip install -r requirements.txt",
+	"remoteUser": "vscode",
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"donjayamanne.python-extension-pack",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"ms-azuretools.vscode-docker",
+				"ms-toolsai.jupyter",
+				"mechatroner.rainbow-csv",
+				"ssmi.after-dark",
+				"PKief.material-icon-theme",
+				"ms-vscode.vscode-node-azure-pack",
+				"cweijan.vscode-database-client2",
+				"rangav.vscode-thunder-client",
+				"ritwickdey.LiveServer"
+			]
+		}
+	}
+}

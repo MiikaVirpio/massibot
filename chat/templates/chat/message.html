@@ -1,0 +1,17 @@
+{% if message %}
+    {% if message.sender == "bot" %}
+    <div class="d-flex justify-content-start ms-2">
+        <p class="col-11 card bg-dark text-light p-2">{{ message.content|safe }}</p>
+    </div>
+    {% elif message.sender == "human" %}
+    <div class="d-flex justify-content-end me-2">
+        <p class="col-11 card bg-light text-dark p-2">{{ message.content }}</p>
+    </div>
+    {% endif %}
+{% endif %}
+{% if sse_url %}
+<div class="d-flex flex-column align-items-start ms-2" hx-ext="sse" sse-connect={{ sse_url }} sse-close="close">
+    <p sse-swap="thought" class="bg-transparent text-light"></p>
+    <p sse-swap="chunk" class="col-11 card bg-dark text-light p-2"></p>
+</div>
+{% endif %}

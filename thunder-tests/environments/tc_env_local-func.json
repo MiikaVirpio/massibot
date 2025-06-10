@@ -1,0 +1,18 @@
+{
+    "_id": "aff85f74-a475-4ab0-a934-715cfa32c19f",
+    "name": "local-func",
+    "default": true,
+    "sortNum": 30000,
+    "created": "2025-02-03T15:53:03.981Z",
+    "modified": "2025-02-03T15:53:03.981Z",
+    "data": [
+        {
+            "name": "bot_url",
+            "value": "http://127.0.0.1:7071/bot"
+        },
+        {
+            "name": "manage_url",
+            "value": "http://127.0.0.1:7071/managepy"
+        }
+    ]
+}

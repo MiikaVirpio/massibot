@@ -1,0 +1,8 @@
+{
+    "python_version": "3.11",
+    "dependencies": ["."],
+    "graphs": {
+        "bot": "bot/masking_bot.py:graph"
+    },
+    "auth": {"path": "bot/authentication.py:auth"}
+}

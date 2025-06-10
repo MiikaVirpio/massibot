@@ -1,0 +1,24 @@
+{
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "workbench.colorTheme": "After Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.exclude": {
+        ".pytest_cache": true,
+        "**/__pycache__": true
+    },
+    "thunder-client.saveToWorkspace": true,
+    "material-icon-theme.folders.associations": {
+        "thunder-tests": "connection"
+    },
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.projectLanguageModel": 2,
+    "azureFunctions.createPythonVenv": false,
+    "azureFunctions.showPythonVenvWarning": false,
+    "azureFunctions.showProjectWarning": false,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportGeneralTypeIssues": "none"
+    }
+}

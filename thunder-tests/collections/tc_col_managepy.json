@@ -1,0 +1,66 @@
+{
+    "_id": "1eb4307f-f20d-4d79-8daf-d3053616b52d",
+    "colName": "managepy",
+    "created": "2025-02-03T19:50:50.870Z",
+    "sortNum": 20000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1b49684a-4d77-45ff-b58d-026a265010f1",
+            "colId": "1eb4307f-f20d-4d79-8daf-d3053616b52d",
+            "containerId": "",
+            "name": "Migrate",
+            "url": "/migrate",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-03T19:51:02.865Z",
+            "modified": "2025-06-10T09:21:12.226Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{}",
+                "form": []
+            }
+        },
+        {
+            "_id": "78e0dfb6-f1d6-400e-a151-ce0f74c2391c",
+            "colId": "1eb4307f-f20d-4d79-8daf-d3053616b52d",
+            "containerId": "",
+            "name": "Create Superuser",
+            "url": "/createsuperuser",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-03T20:15:32.950Z",
+            "modified": "2025-06-10T09:21:20.739Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"\",\n  \"username\": \"\",\n  \"password\": \"\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "settings": {
+        "headers": [
+            {
+                "name": "x-functions-key",
+                "value": "{{FUNCTIONS_KEY}}"
+            }
+        ],
+        "options": {
+            "baseUrl": "{{manage_url}}"
+        }
+    }
+}

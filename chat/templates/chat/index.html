@@ -1,0 +1,36 @@
+{% extends "chat/base.html" %}
+{% block content %}
+<div class="d-flex flex-column flex-grow-1 justify-content-end gradient-bg" style="height: 10rem;">
+    <div id="messages" class="container overflow-y-scroll" style="max-width: 576px;">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+</div>
+<div class="gradient-bg">
+    <span id="temptarget"></span>
+    <div class="container p-2" style="max-width: 576px;">
+        <form class="input-group" style="height: 8rem;">
+            {% csrf_token %}
+            <textarea name="user-message" id="user-message" class="form-control bg-light text-dark"></textarea>
+            <span id="sendbutton" hx-post="{% url 'chat:send-message' %}" hx-target="#messages" hx-swap="beforeend scroll:bottom" hx-on--before-request="document.querySelector('#user-message').value=''" type="submit" class="input-group-text btn btn-secondary">
+                <i class="bi bi-send" style="font-size: 1.5rem;"></i>
+            </span>
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+<script>
+    let messages = document.getElementById("messages");
+    messages.scrollTo(0, messages.scrollHeight);
+    document.body.addEventListener("htmx:sseMessage", function(event) {
+        messages.scrollTo(0, messages.scrollHeight);
+    });
+    document.addEventListener('keydown', function(event) {
+      if (event.ctrlKey && event.key == 'Enter') {
+        document.getElementById('sendbutton').click();
+      }
+    });
+</script>
+{% endblock %}

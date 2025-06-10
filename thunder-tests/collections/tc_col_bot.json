@@ -1,0 +1,184 @@
+{
+    "_id": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+    "colName": "bot",
+    "created": "2025-01-27T07:59:20.049Z",
+    "sortNum": 10000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e78a9c54-d517-4cfb-8c6a-fc956d1f45bc",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Run Wait",
+            "url": "/runs/wait",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-01-27T08:09:29.439Z",
+            "modified": "2025-01-27T08:44:55.908Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"input\": {\n        \"messages\": [\n            {\n                \"content\": \"Hello! Good vibes, right?\",\n                \"additional_kwargs\": {},\n                \"response_metadata\": {},\n                \"type\": \"human\",\n                \"name\": null,\n                \"id\": null,\n                \"example\": false\n            }\n        ]\n    },\n    \"assistant_id\": \"bot\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "10b8becc-48fc-477c-b05f-d3904b504055",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Thread Run Wait",
+            "url": "/threads/{{thread_id}}/runs/wait",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-01-27T09:19:26.847Z",
+            "modified": "2025-02-03T21:29:39.498Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"input\": {\n        \"messages\": [\n            {\n                \"content\": \"Birds fly in the sky and...\",\n                \"additional_kwargs\": {},\n                \"response_metadata\": {},\n                \"type\": \"human\",\n                \"name\": null,\n                \"id\": null,\n                \"example\": false\n            }\n        ]\n    },\n    \"assistant_id\": \"bot\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "32480c72-fbd7-44d1-ae99-7a34034fd3d3",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Thread Create",
+            "url": "/threads",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-01-28T10:31:48.744Z",
+            "modified": "2025-01-28T10:33:32.670Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ad35ca68-b553-40e7-bb5a-fe0fc5783a8b",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Thread Get State",
+            "url": "/threads/{{thread_id}}/state",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-01-28T11:17:23.083Z",
+            "modified": "2025-02-02T16:57:13.636Z",
+            "headers": []
+        },
+        {
+            "_id": "4d9e9795-1db1-4970-aad1-739dbc6ee6f3",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Run Stream",
+            "url": "/runs/stream",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2025-01-28T12:43:57.359Z",
+            "modified": "2025-02-02T14:23:18.626Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"input\": {\n        \"messages\": [\n            {\n                \"content\": \"Continue this: Greedy the red and meek the blue,\",\n                \"additional_kwargs\": {},\n                \"response_metadata\": {},\n                \"type\": \"human\",\n                \"name\": null,\n                \"id\": null,\n                \"example\": false\n            }\n        ]\n    },\n    \"assistant_id\": \"bot\",\n    \"stream_mode\": \"values\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "fcab986e-7d74-46db-b6a1-ebf1743ad42a",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Test",
+            "url": "/streamtest",
+            "method": "GET",
+            "sortNum": 55000,
+            "created": "2025-02-02T15:50:30.870Z",
+            "modified": "2025-06-10T09:25:29.514Z",
+            "headers": [
+                {
+                    "name": "origin",
+                    "value": "http://localhost:8000"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ]
+        },
+        {
+            "_id": "07d5447a-822f-4a52-a284-e6a91581ce1a",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Thread Update State",
+            "url": "/threads/{{thread_id}}/state",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2025-02-03T15:48:57.155Z",
+            "modified": "2025-02-03T21:29:04.888Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"values\": {\n    \"messages\": [\n      {\n        \"content\": \"Greet me with one word, please.\",\n        \"additional_kwargs\": {},\n        \"response_metadata\": {},\n        \"type\": \"human\",\n        \"name\": null,\n        \"id\": null,\n        \"example\": false\n      }\n    ]\n  }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "151602da-e9c4-46a1-ab78-61b599144220",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "SSE Html",
+            "url": "/sse-html/{{thread_id}}",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2025-02-03T17:05:15.938Z",
+            "modified": "2025-02-03T21:29:58.729Z",
+            "headers": []
+        },
+        {
+            "_id": "493a793b-3515-4bee-b3b3-b3f700daf490",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Status",
+            "url": "/status",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2025-02-03T20:55:23.901Z",
+            "modified": "2025-02-03T20:55:37.179Z",
+            "headers": []
+        },
+        {
+            "_id": "29482899-a31f-4424-8d9c-f1c51a25afed",
+            "colId": "24be8a15-3fc6-4ac2-89ff-eaa1369f35ec",
+            "containerId": "",
+            "name": "Store Search",
+            "url": "/store/items/search",
+            "method": "POST",
+            "sortNum": 52500,
+            "created": "2025-06-02T01:42:09.225Z",
+            "modified": "2025-06-02T01:43:47.361Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"namespace_prefix\": [\"memories\",\"tired\"],\n  \"limit\": 30\n}",
+                "form": []
+            }
+        }
+    ],
+    "settings": {
+        "headers": [
+            {
+                "name": "Authorization",
+                "value": "{{MASTER_KEY}}"
+            },
+            {
+                "name": "X-Master-Key",
+                "value": "{{MASTER_KEY}}"
+            }
+        ],
+        "options": {
+            "baseUrl": "{{bot_url}}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "_id": "3c71021e-e3cf-40b9-a4a7-2f0f3ea39d4e",
+    "name": "local-dev",
+    "default": false,
+    "sortNum": 10000,
+    "created": "2025-01-27T08:05:29.985Z",
+    "modified": "2025-01-27T08:05:29.985Z",
+    "data": [
+        {
+            "name": "bot_url",
+            "value": "http://127.0.0.1:2024"
+        }
+    ]
+}

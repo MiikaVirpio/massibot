@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'chat/favicon.png' %}" >
+    <link rel="stylesheet" href="{% static 'chat/style.css' %}">
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/htmx-ext-sse@2.2.2/sse.js"></script>
+    <meta name="htmx-config" content='{"selfRequestsOnly": false}'>
+    <title>MassiBot</title>
+</head>
+<body data-bs-theme="dark">
+    <div class="d-flex flex-column" style="height: 100vh;">
+        {% include "chat/menu.html" %}
+        {% block content %}{% endblock %}
+    </div>
+    {% block javascript %}{% endblock %}
+    {% bootstrap_javascript %}
+</body>
+</html>

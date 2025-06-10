@@ -1,0 +1,14 @@
+{
+    "_id": "3e1d85db-b5c3-4a35-99a8-fe7dab722a45",
+    "name": "local-api",
+    "default": false,
+    "sortNum": 20000,
+    "created": "2025-01-27T08:52:39.892Z",
+    "modified": "2025-01-27T08:52:39.892Z",
+    "data": [
+        {
+            "name": "bot_url",
+            "value": "http://127.0.0.1:8001"
+        }
+    ]
+}

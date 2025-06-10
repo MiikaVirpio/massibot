@@ -1,0 +1,71 @@
+<div class="gradient-bg">
+    <div class="container" style="max-width: 576px;">
+        <nav class="navbar ps-2">
+            <a href="#" class="navbar-brand">
+                <span>MassiBot</span>    
+            </a>
+            <span class="navbar-text">
+                <button class="btn bi bi-person-fill" style="font-size: 1.5rem;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasProfile" aria-controls="offcanvasProfile"></button>
+                <button class="btn bi bi-gear-fill" style="font-size: 1.5rem;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings" aria-controls="offcanvasSettings"></button>
+            </span>
+        </nav>
+    </div>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasProfile" aria-labelledby="offcanvasProfileLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasProfileLabel">Profile</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <h4 class="text-center d-flex align-items-center justify-content-center">
+            Summary
+            <a hx-get="{% url 'chat:get-summary' %}" hx-target="#summary" hx-swap="innerHTML" class="ms-2" title="Update Summary">
+                <i class="bi bi-arrow-clockwise"></i>
+            </a>
+        </h4>
+        <div class="container">
+            <p id="summary" class="text-center">Update summary with the button</p>
+        </div>
+        <h4 class="text-center d-flex align-items-center justify-content-center">
+            Profile Memories
+            <a hx-get="{% url 'chat:get-memories' %}?memtype=personal" hx-target="#personal" hx-swap="innerHTML" class="ms-2" title="Update profile memories">
+                <i class="bi bi-arrow-clockwise"></i>
+            </a>
+        </h4>
+        <div class="container">
+            <p id="personal" class="text-center">Update profile memories with the button</p>
+        </div>
+        <h4 class="text-center d-flex align-items-center justify-content-center">
+            Financial Learning
+            <a hx-get="{% url 'chat:get-memories' %}?memtype=financial" hx-target="#financial" hx-swap="innerHTML" class="ms-2" title="Update financial memories">
+                <i class="bi bi-arrow-clockwise"></i>
+            </a>
+        </h4>
+        <div class="container">
+            <p id="financial" class="text-center">Update financial learning events with the button</p>
+        </div>
+        <h4 class="text-center d-flex align-items-center justify-content-center">
+            Life Memories
+            <a hx-get="{% url 'chat:get-memories' %}?memtype=life" hx-target="#life" hx-swap="innerHTML" class="ms-2" title="Update life memories">
+                <i class="bi bi-arrow-clockwise"></i>
+            </a>
+        </h4>
+        <div class="container">
+            <p id="life" class="text-center">Update life memories with the button</p>
+        </div>
+    </div>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettingsLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSettingsLabel">Settings</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="container">
+            <h4 class="text-center d-flex align-items-center justify-content-center">Current User ID</h4>
+            <p class="text-center">{{ user_id }}</p>
+            <br><br>
+            <a class="btn btn-primary" id="resetThread" href="{% url 'chat:reset-thread' %}" role="button">Reset Thread</a>
+        </div>
+    </div>
+</div>

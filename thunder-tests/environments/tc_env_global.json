@@ -1,0 +1,16 @@
+{
+    "_id": "4726ba12-6569-4f91-90d6-a185094a4d85",
+    "name": "(Global Env)",
+    "default": false,
+    "global": true,
+    "sortNum": -2,
+    "created": "2025-01-27T08:05:55.723Z",
+    "modified": "2025-01-27T08:05:55.723Z",
+    "data": [
+        {
+            "name": "thread_id",
+            "value": "fac25050-5827-4506-85bd-e1cca25a0d85"
+        }
+    ],
+    "envFile": "../.env"
+}

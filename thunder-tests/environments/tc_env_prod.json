@@ -1,0 +1,18 @@
+{
+    "_id": "8eec3d64-e5b8-496f-9385-8f91a585d8c0",
+    "name": "prod",
+    "default": false,
+    "sortNum": 30000,
+    "created": "2025-02-03T19:13:21.319Z",
+    "modified": "2025-02-03T19:13:21.319Z",
+    "data": [
+        {
+            "name": "bot_url",
+            "value": "https://massibot.azurewebsites.net/bot"
+        },
+        {
+            "name": "manage_url",
+            "value": "https://massibot.azurewebsites.net/managepy"
+        }
+    ]
+}
